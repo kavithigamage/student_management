@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="100%" height="100%">
+  <!-- Icon -->
+  <g transform="translate(20, 15)">
+    <!-- Background Circle -->
+    <circle cx="45" cy="45" r="42" fill="#0F172A" />
+    
+    <!-- Stylized 'S' and Cap Motif -->
+    <path d="M28 55 C28 42 62 48 62 35 C62 28 52 26 45 28" fill="none" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+    <polygon points="45,28 68,36 45,44 22,36" fill="#38BDF8" />
+    
+    <!-- Small Status Node -->
+    <circle cx="68" cy="58" r="5" fill="#22C55E" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(125, 62)">
+    <text font-family="'Inter', sans-serif" font-size="42" font-weight="300" fill="#0F172A">student<tspan font-weight="800" fill="#0284C7">Hub</tspan></text>
+    <line x1="2" y1="12" x2="280" y2="12" stroke="#E2E8F0" stroke-width="2" />
+    <text x="2" y="28" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing="3">INTEGRATED CAMPUS PLATFORM</text>
+  </g>
+</svg>
