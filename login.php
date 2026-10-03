@@ -1,3 +1,45 @@
+<?php
+    session_start();
+    include "includes/db.php";
+
+    if(isset($_POST['login'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? ");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        // Check if email exists
+        if($result->num_rows > 0){
+            // Get the user's database row
+            $user = $result->fetch_assoc();
+
+            // Verify entered password with hashed password
+            if(password_verify($password, $user['password'])){
+                $_SESSION['user_id'] = $user['user_id'];
+                $_SESSION['name'] = $user['name'];
+                $_SESSION['role'] = $user['role'];
+
+                if($user['role'] == 'admin'){
+                    header("Location: admin/dashboard.php");
+                } else {
+                    header("Location: student/dashboard.php");
+                }
+                exit();
+            }
+            else {
+                echo "<script>alert('Invalid email or password');</script>";
+            }
+        }
+        else {
+            echo "<script>alert('Invalid email or password');</script>";
+        }
+        $stmt->close();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +79,7 @@
    <h1>Welcome Back!</h1>
    <h2>Login to your account</h2>
     <div class="container">
-        <form action="" method="post">
+        <form action="login.php" method="post">
             <label for="email">Email</label> <br>
             <input type="text" id="email" name="email"> <br><br>
 

@@ -1,4 +1,5 @@
 <?php
+    include "../includes/admin-auth.php";
     include "../includes/db.php";
     $result_id = (int)$_GET['id'];
 

@@ -1,4 +1,6 @@
 <?php
+    
+    include "../includes/admin-auth.php";
     include "../includes/db.php";
     $enrollment_id = (int)$_GET['id'];
 

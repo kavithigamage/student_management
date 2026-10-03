@@ -1,3 +1,30 @@
+<?php
+    include "includes/db.php";
+
+    if(isset($_POST['register'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $confirm_password = $_POST['confirm-password'];
+        $role = 'student'; // Default role for new users
+
+        if($password !== $confirm_password){
+            echo "<script>alert('Passwords do not match!');</script>";
+        } else {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            $stmt = $conn->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $name, $email, $hashed_password, $role);
+            if($stmt->execute()){
+                echo "<script>alert('Registration successful! Please login.'); window.location.href='login.php';</script>";
+            } else {
+                echo "<script>alert('Error: ". $stmt->error ."');</script>";
+            }
+            $stmt->close();
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +64,7 @@
    <h1>Create Your Account</h1>
    <h2>Register to access studentHub</h2>
     <div class="container">
-        <form action="" method="post">
+        <form action="register.php" method="post">
             <label for="name">Full Name</label> <br>
             <input type="text" id="name" name="name"> <br><br>
 

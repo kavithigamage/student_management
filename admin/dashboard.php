@@ -1,3 +1,7 @@
+<?php
+    include "../includes/admin-auth.php";
+    include "../includes/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +73,7 @@
         include "../includes/admin-navbar.php";
     ?>
     <div class="welcome-section">
-        <h3>Welcome back, Admin! 👋</h3> 
+        <h3>Welcome back, <?php echo $_SESSION['name']; ?>! 👋</h3> 
         <p>Here's an overview of the student management system. </p>
     </div>
     <div class="cards">
