@@ -34,6 +34,7 @@
         <a href="../admin/course.php">Courses</a>
         <a href="../admin/enrollments.php">Enrollments</a>
         <a href="../admin/results.php">Results</a>
+        <a href="../admin/add_admin.php">Add Admin</a>
         <a href="../logout.php">Logout</a>
     </nav>
 </body>

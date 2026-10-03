@@ -59,7 +59,7 @@
         include "../includes/student-navbar.php";
     ?>
     <div class="welcome-section">
-        <h3>Welcome back, Student! 👋</h3> 
+        <h3>Welcome back, <?php echo $_SESSION['name']; ?>! 👋</h3> 
         <p>Here's an overview of your academic activities.</p>
     </div>
     <div class="cards">

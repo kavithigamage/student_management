@@ -27,7 +27,7 @@
 <body>
     <footer>
         <div>
-            <img src="../images/gemini-svg.svg" alt="">
+            <img src="/student_management/images/gemini-svg.svg" alt="">
             <p>© 2026 StudentHub</p>
         </div>
         <div>

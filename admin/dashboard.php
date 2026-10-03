@@ -97,7 +97,7 @@
     <div class="recent-students">
         <div class="theme">
             <h2>Recent Students </h2>
-            <a href="../admin/students.php">View All</a> 
+            <a href="students.php">View All</a> 
         </div>
         <table border="1" width="800" >
             <thead>
@@ -121,7 +121,7 @@
     <div class="recent-enrollements">
         <div class="theme">
             <h2>Recent Enrollments</h2>
-            <a href="../admin/enrollements.php">View All</a> 
+            <a href="enrollments.php">View All</a> 
         </div>
         <table width="600" border="1">
             <thead>
