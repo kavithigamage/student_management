@@ -13,14 +13,25 @@
         } else {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            $stmt = $conn->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $name, $email, $hashed_password, $role);
-            if($stmt->execute()){
+            $stmt1 = $conn->prepare("INSERT INTO users(name, email, password, role) VALUES (?, ?, ?, ?)");
+            $stmt1->bind_param("ssss", $name, $email, $hashed_password, $role);
+            
+
+            if($stmt1->execute()){
+                // Get the newly created user ID
+                $user_id = $conn->insert_id;
+
+                // Create student record using the user ID
+                $stmt2 = $conn->prepare("INSERT INTO students(user_id) VALUES (?)");
+                $stmt2->bind_param("i", $user_id);
+                $stmt2->execute();
+                $stmt2->close();
+                
                 echo "<script>alert('Registration successful! Please login.'); window.location.href='login.php';</script>";
             } else {
-                echo "<script>alert('Error: ". $stmt->error ."');</script>";
+                echo "<script>alert('Error: ". $stmt1->error ."');</script>";
             }
-            $stmt->close();
+            $stmt1->close();
         }
     }
 ?>

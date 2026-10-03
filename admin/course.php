@@ -59,7 +59,7 @@
                             <td>{$row['description']}</td>
                             <td>
                                 <a href='edit_course.php?id={$row['course_id']}'>Edit</a>
-                                <a href='delete_course.php?id={$row['course_id']}' onclick=\"return confirm('Delete this course record?')\">Delete the course</a>
+                                <a href='delete_course.php?id={$row['course_id']}' onclick=\"return confirm('Delete this course record?')\">Delete</a>
                             </td>
                         </tr>
                         ";

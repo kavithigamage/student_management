@@ -11,8 +11,8 @@
             flex-direction: row;
             margin: 5px;
             flex-wrap: wrap;
-            bottom: 0;
             width: 100%;
+            margin-top: auto;
         }
         footer div{
             background-color: black;

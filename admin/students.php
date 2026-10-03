@@ -61,7 +61,7 @@
                             <td>{$row['email']}</td>
                             <td>
                                 <a href='edit_student.php?id={$row['student_id']}'>Edit</a>
-                                <a href='delete_student.php?id={$row['student_id']}' onclick=\"return confirm('Delete this student record?')\">Delete the student</a>
+                                <a href='delete_student.php?id={$row['student_id']}' onclick=\"return confirm('Delete this student record?')\">Delete</a>
                             </td>
                         </tr>
                         ";
