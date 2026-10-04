@@ -47,7 +47,12 @@
             </thead>
             <tbody>
                 <?php  
-                    $result = $conn->query("SELECT c.course_id, c.course_code, c.course_name, c.credits, c.description FROM courses c JOIN enrollments e ON c.course_id = e.course_id JOIN students s ON e.student_id = s.student_id WHERE s.user_id = $user_id");
+                    $result = $conn->query("SELECT c.course_id, c.course_code, c.course_name, c.credits, c.description FROM courses c JOIN enrollments e ON c.course_id = e.course_id JOIN students s ON e.student_id = s.student_id WHERE s.user_id = $user_id");     
+                    if ($result->num_rows == 0) {
+                        echo "<tr>
+                                <td colspan='5'>No courses available yet.</td>
+                            </tr>";
+                    }
                     while($row = $result->fetch_assoc()){
                         echo"<tr>
                             <td>{$row['course_id']}</td>

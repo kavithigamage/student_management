@@ -80,6 +80,10 @@
         form input[type="submit"]{
             padding: 10px ;
         }
+        form p{
+            font-size: 15px;
+            color: red;
+        }
     </style>
 
 </head>
@@ -103,7 +107,7 @@
             <label for="password">New Password:</label>
             <input type="password" name="password" id="password">
             <p>Leave blank if you don't want to change your password.</p>
-            <br><br>
+            <br>
             <label for="student_number">Student Number:</label>
             <input type="text" name="student_number" id="student_number" value="<?php echo htmlspecialchars($student['student_number']); ?>" required>
             <br><br>

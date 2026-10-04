@@ -42,7 +42,6 @@
                     <th>Course Name</th>
                     <th>Credits</th>
                     <th>Description</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
