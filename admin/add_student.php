@@ -17,22 +17,30 @@
         }
         if(empty($errors)){
             // Insert into users table
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $stmt1 = $conn->prepare("INSERT INTO users(name, email, password, role) VALUES (?, ?, ?, ?)");
             $role = "student";
-            $stmt1->bind_param("ssss", $name, $email, $password, $role);
-            $stmt1->execute();
-            // Get the newly created user_id - Get the ID that MySQL just automatically generated from the most recent INSERT query.
-            $user_id = $conn->insert_id;
-            $stmt1->close();
+            $stmt1->bind_param("ssss", $name, $email, $hashed_password, $role);
+            if($stmt1->execute()){
+                // Get the newly created user_id - Get the ID that MySQL just automatically generated from the most recent INSERT query.
+                $user_id = $conn->insert_id;
+                $stmt1->close();
 
-            // Insert into students table using the same user_id
-            $stmt2 = $conn->prepare("INSERT INTO students(user_id, student_number, nic, mobile, address) VALUES (?, ?, ?, ?, ?)");
-            $stmt2->bind_param("issss",$user_id,$student_number,$nic,$mobile, $address);
-            $stmt2->execute();
-            $stmt2->close();
+                // Insert into students table using the same user_id
+                $stmt2 = $conn->prepare("INSERT INTO students(user_id, student_number, nic, mobile, address) VALUES (?, ?, ?, ?, ?)");
+                $stmt2->bind_param("issss",$user_id,$student_number,$nic,$mobile, $address);
+                if($stmt2->execute()){
+                    $stmt2->close();
 
-            header("Location: students.php");
-            exit();
+                    header("Location: students.php");
+                    exit();
+                }else {
+                    $errors[] = "Error adding student details: ";
+                }
+            }
+            else {
+                $errors[] = "Error creating user account. Email may already exist. ";
+            }
         }
     }
 ?>

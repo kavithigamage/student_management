@@ -13,15 +13,19 @@
         }
         if(empty($errors)){
             // Insert into users table
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $stmt1 = $conn->prepare("INSERT INTO users(name, email, password, role) VALUES (?, ?, ?, ?)");
             $role = "admin";
-            $stmt1->bind_param("ssss", $name, $email, $password, $role);
-            $stmt1->execute();
-            $stmt1->close();
-
-
-            header("Location: admins.php");
-            exit();
+            $stmt1->bind_param("ssss", $name, $email, $hashed_password, $role);
+            
+            if($stmt1->execute()){
+                $stmt1->close();
+                header("Location: dashboard.php");
+                exit();
+            }else {
+                    $errors[] = "Error adding admin details: " . $stmt1->error;
+                    $stmt1->close();
+            }
         }
     }
 ?>

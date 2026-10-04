@@ -28,8 +28,9 @@
         $address = trim($_POST['address']);
 
         // Insert into users table
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $stmt1 = $conn->prepare("UPDATE users SET name=?, email=?, password=? WHERE user_id=?");
-        $stmt1->bind_param("sssi", $name, $email, $password, $user_id);
+        $stmt1->bind_param("sssi", $name, $email, $hashed_password, $user_id);
         $stmt1->execute();
         $stmt1->close();
 
