@@ -13,14 +13,27 @@
             $errors[] = "All fields are required";
         }
         if(empty($errors)){
-            // Insert into results table
-            $stmt = $conn->prepare("INSERT INTO results(student_id, course_id, marks, grade) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("iiss", $student_id, $course_id, $marks, $grade);
-            $stmt->execute();
-            $stmt->close();
+            // Check whether the student is actively enrolled in the course
+            $check = $conn->prepare("SELECT enrollment_id FROM enrollments WHERE student_id = ? AND course_id = ? AND status = 'completed' ");
+            $check->bind_param("ii", $student_id, $course_id);
+            $check->execute();
+            $check_result = $check->get_result();
 
-            header("Location: results.php");
-            exit();
+            if($check_result->num_rows == 0){
+                $errors[] = "This student is not actively enrolled in this course.";
+            } else {
+                // Insert result
+                $stmt = $conn->prepare("INSERT INTO results(student_id, course_id, marks, grade) VALUES (?, ?, ?, ?)");
+
+                $stmt->bind_param("iiss", $student_id, $course_id, $marks, $grade);
+                $stmt->execute();
+                $stmt->close();
+
+                header("Location: results.php");
+                exit();
+            }
+
+            $check->close();
         }
     }
 ?>
@@ -91,9 +104,15 @@
             <br><br>
             <label for="grade">Grade:</label>
             <select name="grade" id="grade" required>
+                <option value="A+">A+</option>
                 <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
                 <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
                 <option value="C">C</option>
+                <option value="C-">C-</option>
                 <option value="D">D</option>
                 <option value="F">F</option>
             </select>

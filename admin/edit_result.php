@@ -108,9 +108,15 @@
             <br><br>
             <label for="grade">Grade:</label>
             <select name="grade" id="grade" required>
+                <option value="A+" <?php if($result_selected['grade'] == 'A+') echo 'selected'; ?>>A+</option>
                 <option value="A" <?php if($result_selected['grade'] == 'A') echo 'selected'; ?>>A</option>
+                <option value="A-" <?php if($result_selected['grade'] == 'A-') echo 'selected'; ?>>A-</option>
+                <option value="B+" <?php if($result_selected['grade'] == 'B+') echo 'selected'; ?>>B+</option>
                 <option value="B" <?php if($result_selected['grade'] == 'B') echo 'selected'; ?>>B</option>
+                <option value="B-" <?php if($result_selected['grade'] == 'B-') echo 'selected'; ?>>B-</option>
+                <option value="C+" <?php if($result_selected['grade'] == 'C+') echo 'selected'; ?>>C+</option>
                 <option value="C" <?php if($result_selected['grade'] == 'C') echo 'selected'; ?>>C</option>
+                <option value="C-" <?php if($result_selected['grade'] == 'C-') echo 'selected'; ?>>C-</option>
                 <option value="D" <?php if($result_selected['grade'] == 'D') echo 'selected'; ?>>D</option>
                 <option value="F" <?php if($result_selected['grade'] == 'F') echo 'selected'; ?>>F</option>
             </select>

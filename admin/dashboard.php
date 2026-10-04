@@ -80,17 +80,46 @@
         <div>
             <p>👨‍🎓</p>  
             <h3>Total Students</h3> <br>
-            <p>125</p>
+            <p>
+                <?php
+                    $result = $conn->query("SELECT COUNT(*) AS total_students FROM students");
+                    $row = $result->fetch_assoc();
+                    echo $row['total_students'];
+                ?>
+            </p>
         </div>
         <div>
             <p>📚</p>
             <h3>Total Courses</h3> <br>
-            <p>18</p>
+            <p>
+                <?php
+                    $result = $conn->query("SELECT COUNT(*) AS total_courses FROM courses");
+                    $row = $result->fetch_assoc();
+                    echo $row['total_courses'];
+                ?>
+            </p>
         </div>
         <div>
             <p>📝</p>
             <h3> Total Enrollments</h3> <br>
-            <p>342</p>
+            <p>
+                <?php
+                    $result = $conn->query("SELECT COUNT(*) AS total_enrollments FROM enrollments");
+                    $row = $result->fetch_assoc();
+                    echo $row['total_enrollments'];
+                ?>  
+            </p>
+        </div>
+        <div>
+            <p>📊</p>
+            <h3> Results Added</h3> <br>
+            <p>
+                <?php
+                    $result = $conn->query("SELECT COUNT(*) AS total_results FROM results");
+                    $row = $result->fetch_assoc();
+                    echo $row['total_results'];
+                ?>  
+            </p>
         </div>
     </div>
     <br>
@@ -105,14 +134,20 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <td>001</td>
-                <td>Kavithi</td>
-                <td>...</td>
-                <td><a href="edit_student.php">Edit</a></td>
+                    <?php
+                        $result = $conn->query("SELECT s.student_id, u.name, u.email FROM students s JOIN users u ON s.user_id = u.user_id ORDER BY s.student_id DESC LIMIT 3");
+                        while($row = $result->fetch_assoc()){
+                            echo"<tr>
+                                <td>{$row['student_id']}</td>
+                                <td>{$row['name']}</td>
+                                <td>{$row['email']}</td>
+                            </tr>
+                            ";
+                        }
+                    ?>
             </tbody>
         </table>
     </div>
@@ -132,11 +167,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Kavithi</td>
-                    <td>Programming</td>
-                    <td>30/09/2026</td>
-                </tr>
+                    <?php
+                        $result = $conn->query("SELECT u.name, c.course_code, e.enrollment_date FROM enrollments e JOIN students s ON e.student_id = s.student_id JOIN users u ON s.user_id = u.user_id JOIN courses c ON e.course_id = c.course_id ORDER BY e.enrollment_id DESC LIMIT 3");
+                        while($row = $result->fetch_assoc()){
+                            echo"<tr>
+                                <td>{$row['name']}</td>
+                                <td>{$row['course_code']}</td>
+                                <td>{$row['enrollment_date']}</td>
+                            </tr>
+                            ";
+                        }
+                    ?>
             </tbody>
         </table>
     </div>
