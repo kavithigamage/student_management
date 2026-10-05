@@ -47,7 +47,6 @@
         $stmt3->execute();
         $stmt3->close();
 
-
         header("Location: dashboard.php");
         exit();
     }
@@ -65,7 +64,7 @@
         .content form{
             width: 300px;
             margin-left: 20px;
-            background-color: lightblue;
+            background-color: #8df1bf;
             border-radius: 10px;
             border: 1px solid black;
             padding: 20px;
@@ -85,7 +84,16 @@
             color: red;
         }
     </style>
-
+    <script>
+        function togglePassword() {
+            let password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        }
+    </script>
 </head>
 <body>
     <?php
@@ -106,6 +114,7 @@
             <br><br>
             <label for="password">New Password:</label>
             <input type="password" name="password" id="password">
+            <input type="button" onclick="togglePassword()" value="👁">
             <p>Leave blank if you don't want to change your password.</p>
             <br>
             <label for="student_number">Student Number:</label>

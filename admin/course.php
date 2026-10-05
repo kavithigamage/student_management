@@ -11,13 +11,15 @@
     <style>
         td,th{
             padding: 10px;
+            background-color: #a5e7d6;
+            border: 1px solid black;
         }
         .content{
             margin: 20px;
         }
         .content a{
             text-decoration: none;
-            background-color: lightskyblue;
+            background-color: #e4b9a5;
             color: black;
             padding: 10px 20px;
             border-radius: 5px;

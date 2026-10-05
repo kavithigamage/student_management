@@ -38,6 +38,8 @@
     <style>
         .content{
             margin: 20px;
+            background-color: #a5e7d6;
+            border: 1px solid black;
         }
         .content form{
             width: 300px;
@@ -49,7 +51,7 @@
         }
         .content a{
             text-decoration: none;
-            background-color: lightgreen;
+            background-color: #e4b9a5;
             color: black;
             padding: 10px 20px;
             border-radius: 5px;

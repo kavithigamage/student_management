@@ -66,6 +66,32 @@
             color: white;
         }
     </style>
+    <script>
+        function togglePassword() {
+            let password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+            let confirmPassword = document.getElementById("confirm-password");
+            if (confirmPassword.type === "password") {
+                confirmPassword.type = "text";
+            } else {
+                confirmPassword.type = "password";
+            }
+        }
+        function validateForm() {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
+        }   
+
+    </script>
 </head>
 <body>
     <?php
@@ -83,12 +109,14 @@
             <input type="text" id="email" name="email"> <br><br>
 
             <label for="password">Password</label><br>
-            <input type="password" id="password" name="password"><br><br>
+            <input type="password" id="password" name="password">
+            <input type="button" onclick="togglePassword()" value="👁"> <br><br>
 
             <label for="confirm-password">Confirm Password</label><br>
-            <input type="password" id="confirm-password" name="confirm-password"><br><br>
+            <input type="password" id="confirm-password" name="confirm-password">
+            <input type="button" onclick="togglePassword()" value="👁"> <br><br>
 
-            <button name="register" id="register" value="register">Register</button>
+            <button name="register" id="register" value="register" onclick="return validateForm()">Register</button>
         </form>
 
         <p>Already have an account?</p>

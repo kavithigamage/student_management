@@ -47,6 +47,8 @@
         th, td {
             padding: 10px;
             text-align: left;
+            background-color: #c5ea76;
+            border: 1px solid black;
         }
 
 
@@ -142,7 +144,7 @@
             <h2>My Courses</h2>
             <a href="../student/my_courses.php">View All</a> 
         </div>
-        <table border="1" width="600" >
+        <table width="600" >
             <thead>
                 <tr>
                     <th>Code</th>

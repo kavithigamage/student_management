@@ -11,6 +11,8 @@
     <style>
         td,th{
             padding: 10px;
+            background-color: #c5ea76;
+            border: 1px solid black;
         }
         .content{
             margin: 20px;
@@ -34,7 +36,7 @@
     <div class="content">
         <h1>All Courses</h1>
         <br>
-        <table border="1" >
+        <table>
             <thead>
                 <tr>
                     <th>Course Id</th>

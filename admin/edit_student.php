@@ -65,7 +65,7 @@
         }
         .content a{
             text-decoration: none;
-            background-color: lightgreen;
+            background-color: #e4b9a5;
             color: black;
             padding: 10px 20px;
             border-radius: 5px;
@@ -74,7 +74,16 @@
             padding: 10px;
         }
     </style>
-
+    <script>
+        function togglePassword() {
+            let password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        }
+    </script>
 </head>
 <body>
     <?php
@@ -94,7 +103,8 @@
             <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
             <br><br>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="<?php echo htmlspecialchars($user['password']); ?>" required>
+            <input type="password" name="password" id="password" required>
+            <input type="button" onclick="togglePassword()" value="👁">
             <br><br>
             <label for="student_number">Student Number:</label>
             <input type="text" name="student_number" id="student_number" value="<?php echo htmlspecialchars($student['student_number']); ?>" required>

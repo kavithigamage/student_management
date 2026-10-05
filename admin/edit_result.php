@@ -49,7 +49,7 @@
         }
         .content a{
             text-decoration: none;
-            background-color: lightgreen;
+            background-color: #e4b9a5;
             color: black;
             padding: 10px 20px;
             border-radius: 5px;

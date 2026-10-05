@@ -70,6 +70,16 @@
             color: white;
         }
     </style>
+    <script>
+        function togglePassword() {
+            let password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        }   
+    </script>
 </head>
 <body>
    <?php
@@ -84,7 +94,8 @@
             <input type="text" id="email" name="email"> <br><br>
 
             <label for="password">Password</label><br>
-            <input type="password" id="password" name="password"><br><br>
+            <input type="password" id="password" name="password">
+            <input type="button" onclick="togglePassword()" value="👁"> <br><br>
 
             <button name="login" id="login" value="login">Login</button>
         </form>

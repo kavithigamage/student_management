@@ -12,6 +12,8 @@
     <style>
         td,th{
             padding: 10px;
+            background-color: #c5ea76;
+            border: 1px solid black;
         }
         .content{
             margin: 20px;

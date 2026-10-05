@@ -40,18 +40,14 @@
             text-decoration: none;
             padding: 10px;
             margin-right: 10px;
-            background-color: rgb(125, 172, 59);
-            color: black;
-        }
-        .recent-students table a{
-            padding: 5px;
-            text-decoration: none;
-            background-color: rgb(232, 219, 99);
+            background-color: #e4b9a5;
             color: black;
         }
         th, td {
             padding: 10px;
             text-align: left;
+            background-color: #a5e7d6;
+            border: 1px solid black;
         }
         .quick-actions a{
             border-radius: 8px;
