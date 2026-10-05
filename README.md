@@ -106,6 +106,10 @@ student_management/
 │   ├── add_student.php
 │   ├── edit_student.php
 │   ├── delete_student.php
+│   ├── admins.php
+│   ├── add_admin.php
+│   ├── edit_admin.php
+│   ├── delete_admin.php
 │   ├── courses.php
 │   ├── add_course.php
 │   ├── edit_course.php
@@ -441,7 +445,6 @@ The detailed development documentation is maintained separately from this README
 
 Possible future improvements include:
 
-* Admin CRUD management
 * Student search
 * Course filtering
 * Enrollment filtering
