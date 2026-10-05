@@ -455,7 +455,16 @@ Possible future improvements include:
 * More advanced reports
 * Additional validation
 
----
+Feature	Where	Why JS is useful	Difficulty
+🔴 Delete confirmation	Admin tables	Prevent accidental deletion	⭐
+👁️ Show/hide password	Login/Register/Profile	Easier password entry	⭐
+🔎 Search/filter tables	Students/Admins/Courses	Find records quickly	⭐⭐
+⚡ Live form validation	Add/Edit forms	Give feedback before submitting	⭐⭐
+🔔 Auto-hide messages	Forms	Cleaner success/error messages	⭐⭐
+🎓 Dynamic enrollment form	Add Enrollment	Make selecting student/course easier	⭐⭐⭐
+📊 Dashboard charts	Admin dashboard	Understand statistics visually	⭐⭐⭐
+🔄 AJAX operations	Tables	Update data without page reload	⭐⭐⭐⭐
+
 
 ## Project Status
 
