@@ -83,6 +83,7 @@
             <input type="submit" name="submit" value="Add Admin">
         </form>
         <br><br>
+        <a href="admins.php">Back to Admin</a>
         <br>
     </div>
     <?php
