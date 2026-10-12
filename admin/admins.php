@@ -38,9 +38,12 @@
     <div class="content">
         <h1>Admin Management</h1>
         <br>
+        <label for="search">Search:</label>
+        <input type="text" id="search" oninput="liveSearch()">
+        <br><br>
         <a href="add_admin.php">Add Admin</a>
         <br><br>
-        <table border="1" >
+        <table border="1" id="tableID">
             <thead>
                 <tr>
                     <th>Admin Id</th>
@@ -72,5 +75,6 @@
     <?php
         include "../includes/footer.php";
     ?>
+    <script src="../js/search.js"></script>
 </body>
 </html>

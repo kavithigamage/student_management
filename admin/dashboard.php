@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/student_management/css/style.css">
     <style>
         .welcome-section{
             margin: 25px;
@@ -34,12 +35,16 @@
             display: flex;
             justify-content: space-between;
         }
+        .recent-students h2,
+        .recent-enrollements h2{
+            margin: 0;
+        }
         .recent-students a,
         .recent-enrollements a{
+            margin-right: 10px;
             border-radius: 8px;
             text-decoration: none;
             padding: 10px;
-            margin-right: 10px;
             background-color: #e4b9a5;
             color: black;
         }
@@ -75,7 +80,7 @@
     <div class="cards">
         <div>
             <p>👨‍🎓</p>  
-            <h3>Total Students</h3> <br>
+            <h3>Total Students</h3>
             <p>
                 <?php
                     $result = $conn->query("SELECT COUNT(*) AS total_students FROM students");
@@ -86,7 +91,7 @@
         </div>
         <div>
             <p>📚</p>
-            <h3>Total Courses</h3> <br>
+            <h3>Total Courses</h3>
             <p>
                 <?php
                     $result = $conn->query("SELECT COUNT(*) AS total_courses FROM courses");
@@ -97,7 +102,7 @@
         </div>
         <div>
             <p>📝</p>
-            <h3> Total Enrollments</h3> <br>
+            <h3> Total Enrollments</h3> 
             <p>
                 <?php
                     $result = $conn->query("SELECT COUNT(*) AS total_enrollments FROM enrollments");
@@ -108,7 +113,7 @@
         </div>
         <div>
             <p>📊</p>
-            <h3> Results Added</h3> <br>
+            <h3> Results Added</h3> 
             <p>
                 <?php
                     $result = $conn->query("SELECT COUNT(*) AS total_results FROM results");
@@ -118,7 +123,6 @@
             </p>
         </div>
     </div>
-    <br>
     <div class="recent-students">
         <div class="theme">
             <h2>Recent Students </h2>

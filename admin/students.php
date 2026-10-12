@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/student_management/css/style.css">
     <style>
         td,th{
             padding: 10px;
@@ -24,6 +25,10 @@
             padding: 10px 20px;
             border-radius: 5px;
         }
+        #search{
+            padding: 5px;
+            width: 200px;
+        }
     </style>
 </head>
 <body>
@@ -36,9 +41,12 @@
     <div class="content">
         <h1>Student Management</h1>
         <br>
+        <label for="search">Search:</label>
+        <input type="text" id="search" oninput="liveSearch()">
+        <br><br>
         <a href="add_student.php">Add Student</a>
         <br><br>
-        <table border="1" >
+        <table border="1" id="tableID">
             <thead>
                 <tr>
                     <th>Student Id</th>
@@ -75,5 +83,6 @@
     <?php
         include "../includes/footer.php";
     ?>
+    <script src="../js/search.js"></script>
 </body>
 </html>

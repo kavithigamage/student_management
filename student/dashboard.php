@@ -9,6 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/student_management/css/style.css">
     <title>Document</title>
     <style>
         .welcome-section{
@@ -34,6 +35,10 @@
         .theme{
             display: flex;
             justify-content: space-between;
+        }
+        .my-courses h2,
+        .recent-results h2{
+            margin: 0;
         }
         .my-courses a,
         .recent-results a{
@@ -68,7 +73,7 @@
     <div class="cards">
         <div>
             <p>📚</p>  
-            <h3>Enrolled Courses</h3> <br>
+            <h3>Enrolled Courses</h3>
             <p>
                 <?php
                     $stmt = $conn->prepare("SELECT COUNT(*) AS total_courses FROM enrollments e JOIN students s ON e.student_id = s.student_id WHERE s.user_id = ?");
@@ -82,7 +87,7 @@
         </div>
         <div>
             <p>✅</p>
-            <h3>Completed Courses</h3> <br>
+            <h3>Completed Courses</h3>
             <p>
                 <?php
                     $stmt = $conn->prepare("SELECT COUNT(*) AS total_completed FROM enrollments e JOIN students s ON e.student_id = s.student_id WHERE s.user_id = ?");
@@ -96,7 +101,7 @@
         </div>
         <div>
             <p>📊</p>
-            <h3> GPA </h3> <br>
+            <h3> GPA </h3> 
             <p>
                 <?php
                     $grade_points = [

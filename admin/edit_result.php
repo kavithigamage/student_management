@@ -35,9 +35,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/student_management/css/style.css">
     <style>
         .content{
             margin: 20px;
+            background-color: #a5e7d6;
+            border: 1px solid black;
+            padding: 20px;
         }
         .content form{
             width: 300px;
