@@ -25,7 +25,7 @@
                 // Insert result
                 $stmt = $conn->prepare("INSERT INTO results(student_id, course_id, marks, grade) VALUES (?, ?, ?, ?)");
 
-                $stmt->bind_param("iiss", $student_id, $course_id, $marks, $grade);
+                $stmt->bind_param("iids", $student_id, $course_id, $marks, $grade);
                 $stmt->execute();
                 $stmt->close();
 
