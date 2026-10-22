@@ -46,8 +46,8 @@
             <thead>
                 <tr>
                     <th>Enrollment Id</th>
-                    <th>Student Id</th>
-                    <th>Course Id</th>
+                    <th>Student Name</th>
+                    <th>Course Name</th>
                     <th>Enrollment Date</th>
                     <th>Status</th>
                     <th>Actions</th>
@@ -55,12 +55,12 @@
             </thead>
             <tbody>
                 <?php  
-                    $result = $conn->query("SELECT * FROM enrollments");
+                    $result = $conn->query("SELECT e.enrollment_id, u.name, c.course_name, e.course_id, e.enrollment_date, e.status FROM enrollments e JOIN students s ON e.student_id = s.student_id JOIN users u ON u.user_id = s.user_id JOIN courses c ON e.course_id = c.course_id");
                     while($row = $result->fetch_assoc()){
                         echo"<tr>
                             <td>{$row['enrollment_id']}</td>
-                            <td>{$row['student_id']}</td>
-                            <td>{$row['course_id']}</td>
+                            <td>{$row['name']}</td>
+                            <td>{$row['course_name']}</td>
                             <td>{$row['enrollment_date']}</td>
                             <td>{$row['status']}</td>
                             <td>

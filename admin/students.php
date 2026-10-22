@@ -29,6 +29,12 @@
             padding: 5px;
             width: 200px;
         }
+        .error{
+            color: red;
+        }
+        .success{
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -44,6 +50,19 @@
         <label for="search">Search:</label>
         <input type="text" id="search" oninput="liveSearch()">
         <br><br>
+    
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo "<p class='error'>" . htmlspecialchars($_SESSION['error']) . "</p>";
+            unset($_SESSION['error']);
+        }
+
+        if (isset($_SESSION['success'])) {
+            echo "<p class='success'>" . htmlspecialchars($_SESSION['success']) . "</p>";
+            unset($_SESSION['success']);
+        }
+        ?>
+
         <a href="add_student.php">Add Student</a>
         <br><br>
         <table border="1" id="tableID">
