@@ -87,9 +87,6 @@
 </head>
 <body>
     <?php
-        include "../includes/header.php";
-    ?>
-    <?php
         include "../includes/admin-navbar.php";
     ?>
     <div class="content">

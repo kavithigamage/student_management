@@ -29,9 +29,6 @@
 </head>
 <body>
     <?php
-        include "../includes/header.php";
-    ?>
-    <?php
         include "../includes/student-navbar.php";
     ?>
     <div class="content">

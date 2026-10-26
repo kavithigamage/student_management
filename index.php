@@ -68,9 +68,28 @@
     </style>
 </head>
 <body>   
-    <?php
-        include "includes/header.php";
-    ?>
+    <header class="main-header-general">
+        <div class="brand">
+            <img
+                class="logo"
+                src="/student_management/images/logo.png"
+                alt="University Logo"
+            >
+
+            <div class="brand-text">
+                <h2>Student Hub</h2>
+                <p>Student Management System</p>
+            </div>
+        </div>
+
+        <!-- Navbar is now inside the header -->
+        <nav class="student-navbar">
+            <div class="nav-links">
+                <a href="/student_management/login.php"class="nav-link"> login</a>
+                <a href="/student_management/register.php"class="nav-link"> register</a>
+            </div>
+        </nav>
+    </header>
 
     <div class="hero">
         <div class="content">

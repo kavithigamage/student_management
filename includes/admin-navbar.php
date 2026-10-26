@@ -1,41 +1,76 @@
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-        nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            text-align: center;
-        }
-        nav a{  
-            text-decoration: none;
-            color: white;  
-            flex: 1;    
-            list-style-type: none;
-            background-color: rgb(14, 35, 108);
-            border: 1px solid black;
-            padding: 10px;
-        }
-        nav a:hover{
-            background-color: lightcyan;
-            color: black;
-        }
-    </style>
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="/student_management/css/style.css">
 </head>
 <body>
-    <nav>
-        <a href="../admin/dashboard.php">Dashboard</a>
-        <a href="../admin/students.php">Students</a>
-        <a href="../admin/course.php">Courses</a>
-        <a href="../admin/enrollments.php">Enrollments</a>
-        <a href="../admin/results.php">Results</a>
-        <a href="../admin/admins.php">Admin</a>
-        <a href="../logout.php">Logout</a>
+
+
+<header class="main-header-admin">
+
+    <div class="brand">
+        <img
+            class="logo"
+            src="/student_management/images/logo.png"
+            alt="University Logo"
+        >
+
+        <div class="brand-text">
+            <h2>Student Hub</h2>
+            <p>Student Management System</p>
+        </div>
+    </div>
+
+    <!-- Navbar is now inside the header -->
+    <nav class="admin-navbar">
+        <div class="nav-links">
+
+            <a href="/student_management/admin/dashboard.php"
+               class="nav-link <?= $current_page == 'dashboard.php' ? 'active' : '' ?>">
+                <span class="nav-icon">⌂</span> Dashboard
+            </a>
+
+            <a href="/student_management/admin/students.php"
+               class="nav-link <?= $current_page == 'students.php' ? 'active' : '' ?>">
+                <span class="nav-icon">♙</span> Courses
+            </a>
+
+            <a href="/student_management/admin/course.php"
+               class="nav-link <?= $current_page == 'course.php' ? 'active' : '' ?>">
+                <span class="nav-icon">▤</span> Courses
+            </a>
+
+            <a href="/student_management/admin/enrollments.php"
+               class="nav-link <?= $current_page == 'enrollments.php' ? 'active' : '' ?>">
+                <span class="nav-icon">▣</span> Enrollments
+            </a>
+
+            <a href="/student_management/admin/results.php"
+               class="nav-link <?= $current_page == 'results.php' ? 'active' : '' ?>">
+                <span class="nav-icon">▥</span> Results
+            </a>
+
+            <a href="/student_management/admin/admins.php"
+               class="nav-link <?= $current_page == 'admins.php' ? 'active' : '' ?>">
+                <span class="nav-icon">♙</span> Admin
+            </a>
+
+        </div>
+
+        <a href="/student_management/logout.php" class="logout-link">
+            <span class="nav-icon">↪</span> Logout
+        </a>
     </nav>
+
+</header>
+
 </body>
 </html>

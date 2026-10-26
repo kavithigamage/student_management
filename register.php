@@ -94,9 +94,6 @@
     </script>
 </head>
 <body>
-    <?php
-        include "includes/header.php";
-    ?>
 
    <h1>Create Your Account</h1>
    <h2>Register to access studentHub</h2>

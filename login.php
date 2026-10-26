@@ -82,9 +82,6 @@
     </script>
 </head>
 <body>
-   <?php
-        include "includes/header.php";
-    ?>
 
    <h1>Welcome Back!</h1>
    <h2>Login to your account</h2>

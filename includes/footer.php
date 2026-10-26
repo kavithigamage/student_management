@@ -1,6 +1,6 @@
 <footer>
     <div>
-        <img src="/student_management/images/gemini-svg.svg" alt="">
+        <img class="logo" src="/student_management/images/logo.png" alt="">
         <p>© 2026 StudentHub</p>
     </div>
     <div>
