@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+/*footer*/
 footer {
     display: flex;
     flex-direction: row;
