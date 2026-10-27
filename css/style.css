@@ -24,11 +24,13 @@ footer div {
     color: white;
     text-align: center;
     flex: 1;
-    border: 2px solid white;
-    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+
 }
 
-/* LOGO AND TITLE */
+/*----------------- LOGO AND TITLE -----------------------*/
 
 .brand {
     display: flex;
