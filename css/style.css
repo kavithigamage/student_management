@@ -11,24 +11,84 @@ body {
     display: flex;
     flex-direction: column;
 }
-/*--------------footer-----------------*/
-footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 5px;
-    width: 100%;
-}
-footer div {
-    background-color: black;
-    color: white;
-    text-align: center;
-    flex: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
+/*----------------FOOTER------------------*/
 
+/* Main content takes the available space */
+main {
+    flex: 1;
 }
+
+/* Footer */
+.site-footer {
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    padding: 15px 7% 20px;
+    background-color: #112816;
+    color: #ffffff;
+    border-top: 3px solid #e6b422;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-brand {
+    flex: 1.2;
+}
+.footer-brand p {
+    line-height: 1.2;
+    margin: 4px 0;
+}
+
+.site-footer .footer-copyright {
+    margin-top: 15px;
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.site-footer h3 {
+    font-size: 17px;
+    margin: 5px 0 18px;
+    font-weight: 600;
+}
+
+.site-footer p {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #d6e4dd;
+    margin: 8px 0;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: #e6b422;
+}
+
+.site-footer .footer-copyright {
+    font-size: 12px;
+    color: #a9c1b5;
+    margin-top: 10px;
+}
+
 
 /*----------------- LOGO AND TITLE -----------------------*/
 
