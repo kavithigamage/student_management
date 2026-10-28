@@ -44,6 +44,7 @@
     <link rel="icon" type="image/png" href="/student_management/images/logo.png">
     <title>Student Hub | Register</title>
     <style>
+<<<<<<< HEAD
         * {
             box-sizing: border-box;
         }
@@ -194,6 +195,29 @@
             margin-top: 18px;
             text-align: center;
             font-size: 14px;
+=======
+        *{
+            text-align: center;
+        }
+        .container{
+            width: 300px;
+            background-color: lightblue;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        button{
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: darkblue;
+            color: white;
+>>>>>>> origin/dashboard
         }
     </style>
     <script>
@@ -220,6 +244,7 @@
             }
             return true;
         }   
+<<<<<<< HEAD
     </script>
 </head>
 <body>
@@ -284,5 +309,38 @@
         </a>
 
     </div>
+=======
+
+    </script>
+</head>
+<body>
+
+   <h1>Create Your Account</h1>
+   <h2>Register to access studentHub</h2>
+    <div class="container">
+        <form action="register.php" method="post">
+            <label for="name">Full Name</label> <br>
+            <input type="text" id="name" name="name"> <br><br>
+
+            <label for="email">Email</label> <br>
+            <input type="text" id="email" name="email"> <br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password">
+            <input type="button" onclick="togglePassword()" value="👁"> <br><br>
+
+            <label for="confirm-password">Confirm Password</label><br>
+            <input type="password" id="confirm-password" name="confirm-password">
+            <input type="button" onclick="togglePassword()" value="👁"> <br><br>
+
+            <button name="register" id="register" value="register" onclick="return validateForm()">Register</button>
+        </form>
+
+        <p>Already have an account?</p>
+        <a href="login.php">Login</a>
+    </div>
+
+    <br><a href="index.php">← Home</a>
+>>>>>>> origin/dashboard
 </body>
 </html>

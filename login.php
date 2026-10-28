@@ -48,6 +48,7 @@
     <link rel="icon" type="image/png" href="/student_management/images/logo.png">
     <title>Student Hub | Login</title>
     <style>
+<<<<<<< HEAD
         * {
             box-sizing: border-box;
         }
@@ -186,6 +187,29 @@
             margin-top: 20px;
             text-align: center;
             font-size: 14px;
+=======
+        *{
+            text-align: center;
+        }
+        .container{
+            width: 300px;
+            background-color: lightcoral;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        button{
+            padding: 10px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: darkblue;
+            color: white;
+>>>>>>> origin/dashboard
         }
     </style>
     <script>
@@ -200,6 +224,7 @@
     </script>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="login-container">
         <img class="logo" src="/student_management/images/logo.png" alt="Student Hub Logo">
         <h1>Welcome Back!</h1>
@@ -232,3 +257,27 @@
 </body>
 </html>
 
+=======
+
+   <h1>Welcome Back!</h1>
+   <h2>Login to your account</h2>
+    <div class="container">
+        <form action="login.php" method="post">
+            <label for="email">Email</label> <br>
+            <input type="text" id="email" name="email"> <br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password">
+            <input type="button" onclick="togglePassword()" value="👁"> <br><br>
+
+            <button name="login" id="login" value="login">Login</button>
+        </form>
+
+        <p>Don't have an account?</p>
+        <a href="register.php">Register</a>
+    </div>
+
+    <br><a href="index.php">← Home</a>
+</body>
+</html>
+>>>>>>> origin/dashboard
