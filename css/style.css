@@ -89,24 +89,6 @@ main {
     margin-top: 10px;
 }
 
-/*--------------footer-----------------*/
-footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 5px;
-    width: 100%;
-}
-footer div {
-    background-color: black;
-    color: white;
-    text-align: center;
-    flex: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-
-}
 
 /*----------------- LOGO AND TITLE -----------------------*/
 
