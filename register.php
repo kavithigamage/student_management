@@ -211,6 +211,23 @@
                 confirmPassword.type = "password";
             }
         }
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            if (password.length < 8) {
+                alert("Password must have at least 8 characters!");
+                return false;
+            }
+            if (password.match(/[0-9]/) == null) {
+                alert("Password must contain at least one number!");
+                return false;
+            }
+            if (password.match(/[!@#$%^&*]/) == null) {
+                alert("Password must contain at least one special character!");
+                return false;
+            }
+
+         return true;
+       }
         function validateForm() {
             let password = document.getElementById("password").value;
             let confirmPassword = document.getElementById("confirm-password").value;
@@ -232,7 +249,7 @@
         <p class="subtitle">Join Student Hub to manage your academic journey</p>
 
         <form action="register.php" method="post"
-              onsubmit="return validateForm()">
+      onsubmit="return validatePassword() && validateForm()">
 
             <div class="form-group">
             <label for="name">Full Name</label>
