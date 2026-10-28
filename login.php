@@ -215,7 +215,7 @@
                 <label for="password">Password</label>
                 <div class="password-wrapper">
                     <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required class="passwordInput">
-                    <input type="button" onclick="togglePassword()" class="toggle-password" value="👁"> 
+                    <input type="button" onclick="togglePassword()" class="toggle-password" value="Show"> 
                 </div>
             </div>
             <button name="login" id="login" value="login" class="login-button">Login</button>
