@@ -9,8 +9,5 @@
     header("Location: index.php");
     exit();
 ?>
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/dashboard

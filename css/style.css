@@ -11,7 +11,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-<<<<<<< HEAD
 /*----------------FOOTER------------------*/
 
 /* Main content takes the available space */
@@ -90,7 +89,6 @@ main {
     margin-top: 10px;
 }
 
-=======
 /*--------------footer-----------------*/
 footer {
     display: flex;
@@ -109,7 +107,6 @@ footer div {
     padding-left: 30px;
 
 }
->>>>>>> origin/dashboard
 
 /*----------------- LOGO AND TITLE -----------------------*/
 
