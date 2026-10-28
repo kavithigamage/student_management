@@ -1,4 +1,3 @@
-```php
 <?php
     include "../includes/admin-auth.php";
     include "../includes/db.php";
@@ -532,4 +531,3 @@
 
 </body>
 </html>
-```
