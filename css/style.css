@@ -4,6 +4,7 @@
 html, body {
     margin: 0;
     min-height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -287,4 +288,199 @@ main {
 .admin-navbar .logout-link:hover {
     background: #a92f2f;
     color: white;
+}
+
+/* ========================================STUDENT PAGE LAYOUT======================================== */
+
+.content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.content-section {
+    background-color: #ffffff;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5ebe7;
+    box-shadow: 0 3px 12px rgba(4, 63, 46, 0.06);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #e6b422;
+}
+
+.section-heading h1 {
+    margin: 0;
+    color: #043f2e;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e2e8e4;
+    border-radius: 8px;
+}
+
+/*TABLE */
+
+.dtable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+.dtable thead {
+    background-color: #043f2e;
+    color: #ffffff;
+}
+
+.dtable th {
+    padding: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: none;
+}
+
+.dtable td {
+    padding: 15px 16px;
+    color: #334155;
+    border-bottom: 1px solid #e8eeea;
+    vertical-align: middle;
+}
+
+.dtable tbody tr:nth-child(even) {
+    background-color: #f6faf7;
+}
+
+.dtable tbody tr:hover {
+    background-color: #edf6f0;
+    transition: background-color 0.2s ease;
+}
+
+.dtable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.empty-message {
+    padding: 30px !important;
+    text-align: center;
+    color: #64748b !important;
+    font-size: 14px;
+}
+/*==================ADMIN PAGE LAYOUTS=========================================*/
+.tadmin thead {
+    background-color: #123b70;
+    color: #ffffff;
+}
+
+.searchbtn {
+    padding: 10px 14px;
+    width: 250px;
+    max-width: 100%;
+    border: 1px solid #cbd5d1;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.searchbtn:focus {
+    border-color: #043f2e;
+    box-shadow: 0 0 0 3px rgba(4, 63, 46, 0.1);
+}
+
+.content label {
+    color: #334155;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+/* Add Student button */
+.addbtn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #123b70;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.addbtn:hover {
+    background-color: #0b2a52;
+}
+
+.deletebtn,
+.editbtn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 12px;
+    margin: 3px 3px 3px 0;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.editbtn{
+    background-color: #123b70;
+    color: #ffffff;
+}
+
+.editbtn:hover {
+    background-color: #0b2a52;
+}
+
+.deletebtn {
+    background-color: #ffffff;
+    color: #b42318;
+    border: 1px solid #b42318;
+}
+
+.deletebtn:hover {
+    background-color: #fef2f2;
+}
+
+.error {
+    color: #b42318;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.success {
+    color: #166534;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin: 15px 0;
 }

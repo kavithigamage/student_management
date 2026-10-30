@@ -40,7 +40,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
             <a href="/student_management/admin/students.php"
                class="nav-link <?= $current_page == 'students.php' ? 'active' : '' ?>">
-                <span class="nav-icon">♙</span> Courses
+                <span class="nav-icon">♙</span> Students
             </a>
 
             <a href="/student_management/admin/course.php"

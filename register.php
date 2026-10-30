@@ -227,7 +227,7 @@
             }
 
          return true;
-       }
+        }
         function validateForm() {
             let password = document.getElementById("password").value;
             let confirmPassword = document.getElementById("confirm-password").value;
