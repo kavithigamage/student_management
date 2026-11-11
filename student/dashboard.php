@@ -243,61 +243,6 @@
             color: #94a3b8;
             padding: 25px !important;
         }
-
-        /* Smaller screens */
-        @media (max-width: 1000px) {
-            .cards {
-                flex-wrap: wrap;
-            }
-
-            .dashboard-card {
-                flex: 1 1 280px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .welcome-section,
-            .cards,
-            .content-section {
-                margin: 18px 15px;
-            }
-
-            .welcome-section {
-                padding: 22px;
-            }
-
-            .welcome-section h2 {
-                font-size: 22px;
-            }
-
-            .cards {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .dashboard-card {
-                min-height: 145px;
-                padding: 20px;
-            }
-
-            .card-icon {
-                width: 50px;
-                height: 50px;
-            }
-
-            .content-section {
-                padding: 17px;
-            }
-
-            .section-heading h2 {
-                font-size: 18px;
-            }
-
-            .dashboard-table th,
-            .dashboard-table td {
-                padding: 12px 10px;
-            }
-        }
     </style>
 </head>
 
