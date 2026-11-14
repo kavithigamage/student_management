@@ -170,32 +170,32 @@
         <form action="edit_student.php?id=<?php echo $student_id; ?>" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($user['name']); ?>" required>
+                <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($user['name']); ?>" >
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
+                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($user['email']); ?>" >
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password">
                 <input type="button" onclick="togglePassword()" value="👁">
             </div>
             <div class="form-group">
                 <label for="student_number">Student Number:</label>
-                <input type="text" name="student_number" id="student_number" value="<?php echo htmlspecialchars($student['student_number']); ?>" required>
+                <input type="text" name="student_number" id="student_number" value="<?php echo htmlspecialchars($student['student_number']); ?>" >
             </div>
             <div class="form-group">
                 <label for="nic">NIC:</label>
-                <input type="text" name="nic" id="nic" value="<?php echo htmlspecialchars($student['nic']); ?>" required>
+                <input type="text" name="nic" id="nic" value="<?php echo htmlspecialchars($student['nic']); ?>" >
             </div>
             <div class="form-group">
                 <label for="mobile">Mobile:</label>
-                <input type="text" name="mobile" id="mobile" value="<?php echo htmlspecialchars($student['mobile']); ?>" required>
+                <input type="text" name="mobile" id="mobile" value="<?php echo htmlspecialchars($student['mobile']); ?>" >
             </div>
             <div class="form-group">
                 <label for="address">Address:</label>
-                <textarea name="address" id="address" required><?php echo htmlspecialchars($student['address']); ?></textarea>
+                <textarea name="address" id="address" ><?php echo htmlspecialchars($student['address']); ?></textarea>
             </div>
             <input class="submit-button" type="submit" name="submit" value="Update Student">
         </form>

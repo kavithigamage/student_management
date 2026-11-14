@@ -153,15 +153,15 @@
         <form action="edit_admin.php?id=<?php echo $admin_id; ?>" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($admin['name']); ?>" required>
+                <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($admin['name']); ?>">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($admin['email']); ?>" required>
+                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($admin['email']); ?>">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password">
                 <input type="button" onclick="togglePassword()" value="👁">
             </div>
             <input class="submit-button" type="submit" name="submit" value="Update Admin">
